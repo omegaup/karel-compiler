@@ -200,15 +200,17 @@ export const printer = {
     } else if (node.name == 'cond') {
       let statements = path.map(print, 'children', 'singleStatement');
       const parts: prettier.Doc[] = [
-        builders.group(
-          builders.concat([
-            path.call(print, 'children', 'If', 0),
-            ' ',
-            builders.align('    ', path.call(print, 'children', 'term', 0)),
-            builders.line,
-            path.call(print, 'children', 'Then', 0),
-          ]),
-        ),
+        builders.concat([
+          path.call(print, 'children', 'If', 0),
+          ' ',
+          builders.group(
+            builders.concat([
+              builders.align('    ', path.call(print, 'children', 'term', 0)),
+              builders.line,
+            ]),
+          ),
+          path.call(print, 'children', 'Then', 0),
+        ]),
       ];
       if (node.children.singleStatement[0].children.block) {
         parts.push(' ', statements[0]);
@@ -271,18 +273,20 @@ export const printer = {
       );
     } else if (node.name == 'repeat') {
       const parts: prettier.Doc[] = [
-        builders.group(
-          builders.concat([
-            path.call(print, 'children', 'Repeat', 0),
-            ' ',
-            builders.align(
-              '       ',
-              path.call(print, 'children', 'integer', 0),
-            ),
-            builders.line,
-            path.call(print, 'children', 'Times', 0),
-          ]),
-        ),
+        builders.concat([
+          path.call(print, 'children', 'Repeat', 0),
+          ' ',
+          builders.group(
+            builders.concat([
+              builders.align(
+                '       ',
+                path.call(print, 'children', 'integer', 0),
+              ),
+              builders.line,
+            ]),
+          ),
+          path.call(print, 'children', 'Times', 0),
+        ]),
       ];
       if (node.children.singleStatement[0].children.block) {
         parts.push(' ', path.call(print, 'children', 'singleStatement', 0));
@@ -303,15 +307,20 @@ export const printer = {
       return builders.concat(parts);
     } else if (node.name == 'loop') {
       const parts: prettier.Doc[] = [
-        builders.group(
-          builders.concat([
-            path.call(print, 'children', 'While', 0),
-            ' ',
-            builders.align('       ', path.call(print, 'children', 'term', 0)),
-            builders.line,
-            path.call(print, 'children', 'Do', 0),
-          ]),
-        ),
+        builders.concat([
+          path.call(print, 'children', 'While', 0),
+          ' ',
+          builders.group(
+            builders.concat([
+              builders.align(
+                '       ',
+                path.call(print, 'children', 'term', 0),
+              ),
+              builders.line,
+            ]),
+          ),
+          path.call(print, 'children', 'Do', 0),
+        ]),
       ];
       if (node.children.singleStatement[0].children.block) {
         parts.push(' ', path.call(print, 'children', 'singleStatement', 0));

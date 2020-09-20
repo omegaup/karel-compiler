@@ -1,0 +1,8 @@
+class program {
+  program() {
+    // Foo
+    if (nextToABeeper) {
+      pickBeeper();
+    }
+  }
+}

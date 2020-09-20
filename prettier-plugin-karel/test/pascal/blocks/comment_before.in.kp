@@ -1,0 +1,7 @@
+iniciar-programa
+  inicia-ejecución
+    { foo }
+    mientras junto-a-zumbador
+    hacer coge-zumbador;
+  termina-ejecución
+finalizar-programa

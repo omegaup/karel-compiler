@@ -1,0 +1,7 @@
+iniciar-programa
+  define-nueva-instrucción espacio como mientras junto-a-zumbador y frente-libre hacer avanza;
+
+  inicia-ejecución
+    espacio;
+  termina-ejecución
+finalizar-programa

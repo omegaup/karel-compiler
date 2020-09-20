@@ -1,0 +1,16 @@
+iniciar-programa
+  define-nueva-instrucción rotate(n) como inicio fin;
+
+  inicia-ejecución
+    mientras orientado-al-este hacer inicio rotate(0); fin;
+    mientras orientado-al-oeste hacer inicio rotate(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(0))))))))))); fin;
+
+    repetir 3 veces inicio rotate(0); fin;
+    repetir 3 veces inicio rotate(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(0))))))))))); fin;
+
+    si orientado-al-norte entonces inicio rotate(0); fin;
+    si orientado-al-norte entonces inicio rotate(0); fin si-no inicio rotate(1); fin;
+
+    si orientado-al-norte entonces inicio rotate(0); fin si-no si orientado-al-este o orientado-al-este entonces inicio rotate(1); fin;
+  termina-ejecución
+finalizar-programa

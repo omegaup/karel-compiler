@@ -1,0 +1,16 @@
+class program {
+  void rotate(n) {}
+
+  program() {
+    while (facingEast) rotate(0);
+    while (facingWest) rotate(succ(succ(succ(succ(succ(succ(succ(succ(succ(succ(0)))))))))));
+
+    iterate (3) rotate(0);
+    iterate (3) rotate(succ(succ(succ(succ(succ(succ(succ(succ(succ(succ(0)))))))))));
+
+    if (facingNorth) rotate(0);
+    if (facingNorth) rotate(0); else rotate(1);
+
+    if (facingNorth) rotate(0); else if (facingEast || facingEast || facingEast || facingEast || facingEast) rotate(1);
+  }
+}

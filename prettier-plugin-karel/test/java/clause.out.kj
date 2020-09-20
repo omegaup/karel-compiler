@@ -6,7 +6,8 @@ class program {
         facingWest && facingWest && facingWest ||
         facingEast ||
         facingEast ||
-        (facingNorth || facingNorth || facingNorth)) {
+        (facingNorth || facingNorth || facingNorth)
+    ) {
       move();
     }
   }

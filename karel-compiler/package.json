@@ -1,6 +1,6 @@
 {
   "name": "karel-compiler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compiler for the Karel language(s)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

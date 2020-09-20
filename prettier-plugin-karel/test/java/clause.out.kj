@@ -1,0 +1,13 @@
+class program {
+  program() {
+    if (facingEast ||
+        facingEast ||
+        facingEast ||
+        facingWest && facingWest && facingWest ||
+        facingEast ||
+        facingEast ||
+        (facingNorth || facingNorth || facingNorth)) {
+      move();
+    }
+  }
+}

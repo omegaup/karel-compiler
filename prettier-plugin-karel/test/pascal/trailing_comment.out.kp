@@ -1,0 +1,4 @@
+iniciar-programa
+  inicia-ejecución { foo }
+  termina-ejecución
+finalizar-programa

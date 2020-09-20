@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "karel-compiler",
+    "prettier-plugin-karel"
+  ],
+  "scripts": {
+    "test": "yarn workspace karel-compiler test && yarn workspace prettier-plugin-karel test",
+    "build": "yarn workspace karel-compiler build && yarn workspace prettier-plugin-karel build",
+    "publish": "yarn workspace karel-compiler publish && yarn workspace prettier-plugin-karel publish",
+    "compiler": "yarn workspace karel-compiler",
+    "prettier-plugin": "yarn workspace prettier-plugin-karel"
+  }
+}

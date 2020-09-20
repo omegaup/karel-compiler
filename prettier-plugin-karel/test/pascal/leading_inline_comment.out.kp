@@ -1,0 +1,5 @@
+{ foo }
+iniciar-programa
+  inicia-ejecución
+  termina-ejecución
+finalizar-programa

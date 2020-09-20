@@ -1,0 +1,12 @@
+iniciar-programa
+  define-prototipo-instrucción foo;
+
+  define-nueva-instrucción foo como sal-de-instrucción;
+
+  inicia-ejecución
+    si algún-zumbador-en-la-mochila entonces inicio
+    fin si-no si ningún-zumbador-en-la-mochila entonces inicio
+    fin;
+    apágate;
+  termina-ejecución
+finalizar-programa

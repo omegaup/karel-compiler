@@ -1,0 +1,7 @@
+iniciar-programa
+  define-nueva-instrucción foo como inicio
+    avanza
+  fin;
+  inicia-ejecución
+  termina-ejecución
+finalizar-programa
